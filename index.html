@@ -1,51 +1,56 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
+    <style type="text/css">
+        body {
+            padding: 20px;
+        }
+    </style>
+    <title>Creating tabbed content with Bootstrap and jQuery</title>
 </head>
-<body> 
-	 
-  <div class="navbar">
-    <div class="navbar-inner">
-      <div class="container">
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </a>
-        <a class="brand" href="#">Project name</a>
-        <div class="nav-collapse">
-          <ul class="nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li class="nav-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-          </ul>
-          
-        </div><!-- /.nav-collapse -->
-      </div>
-    </div><!-- /navbar-inner -->
-  </div><!-- /navbar -->
-
-  
-
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-	
-	<script src="js/bootstrap.js"></script>
-	
-	
+<body>
+ 
+    <div id="content">
+        <ul class="tabs" data-tabs="tabs">
+            <li class="active"><a href="#red">Red</a></li>
+            <li><a href="#orange">Orange</a></li>
+            <li><a href="#yellow">Yellow</a></li>
+            <li><a href="#green">Green</a></li>
+            <li><a href="#blue">Blue</a></li>
+        </ul>
+        <div id="my-tab-content" class="tab-content">
+            <div class="tab-pane active" id="red">
+                <h1>Red</h1>
+                <p>red red red red red red</p>
+            </div>
+            <div class="tab-pane" id="orange">
+                <h1>Orange</h1>
+                <p>orange orange orange orange orange</p>
+            </div>
+            <div class="tab-pane" id="yellow">
+                <h1>Yellow</h1>
+                <p>yellow yellow yellow yellow yellow</p>
+            </div>
+            <div class="tab-pane" id="green">
+                <h1>Green</h1>
+                <p>green green green green green</p>
+            </div>
+            <div class="tab-pane" id="blue">
+                <h1>Blue</h1>
+                <p>blue blue blue blue blue</p>
+            </div>
+        </div>
+    </div>
+ 
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="http://twitter.github.com/bootstrap/1.4.0/bootstrap-tabs.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".tabs").tabs();
+        });
+    </script>
+ 
 </body>
 </html>
